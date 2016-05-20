@@ -1,0 +1,20 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <ol>
+    {% for q in questions %}
+      <li>
+        {{q.question}}
+        <ol>
+          {% for c in q.choices.all %}
+          <li>
+            {{c.choice}}
+          </li>
+          {% endfor %}
+        </ol>
+      {% endfor %}
+    </li>
+  </ol>
+  </body>
+</html>
